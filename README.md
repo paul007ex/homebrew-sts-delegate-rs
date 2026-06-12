@@ -1,18 +1,22 @@
-# Paul007ex Sts-delegate-rs
+# paul007ex/sts-delegate-rs Homebrew Tap
 
-## How do I install these formulae?
+Homebrew tap for the `sts-cli` binary from
+[`sts-delegate-rs`](https://github.com/paul007ex/sts-delegate-rs).
 
-`brew install paul007ex/sts-delegate-rs/<formula>`
+## Install
 
-Or `brew tap paul007ex/sts-delegate-rs` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "paul007ex/sts-delegate-rs"
-brew "<formula>"
+```bash
+brew tap paul007ex/sts-delegate-rs
+brew install sts-cli
+sts-cli --help
 ```
 
-## Documentation
+Or install without a separate tap step:
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+```bash
+brew install paul007ex/sts-delegate-rs/sts-cli
+```
+
+`sts-cli serve` still requires runtime STS configuration, IdP/actor/client JWKS,
+target policy, replay policy, and signing-key files. The Homebrew formula
+installs only the CLI binary from the published GitHub Release archive.
